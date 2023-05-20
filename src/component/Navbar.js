@@ -48,7 +48,6 @@ function Navbar() {
     }
   };
 
-
   return (
     <div className="qHeader">
       <div className="qHeader__logo">
@@ -57,7 +56,7 @@ function Navbar() {
           alt=""
         />
       </div>
-      <div className="qHeader__icons">
+      {/* <div className="qHeader__icons">
         <div className="qHeader__icon">
           <HomeIcon />
         </div>
@@ -73,10 +72,10 @@ function Navbar() {
         <div className="qHeader__icon">
           <NotificationsOutlinedIcon />
         </div>
-      </div>
+      </div> */}
       <div className="qHeader__input">
         <SearchIcon />
-        <input type="text" placeholder="Search Quora" />
+        <input type="text" style={{width:'600px'}} placeholder="Search Quora" />
       </div>
       <div className="qHeader__Rem">
         <div className="qHeader__avatar">
