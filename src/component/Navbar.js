@@ -56,26 +56,26 @@ function Navbar() {
           alt=""
         />
       </div>
-      {/* <div className="qHeader__icons">
-        <div className="qHeader__icon">
+      <div className="qHeader__icons">
+      <a href="https://www.quora.com/"> <div className="qHeader__icon">
           <HomeIcon />
-        </div>
-        <div className="qHeader__icon">
+        </div></a>
+        <a href="https://www.quora.com/following"><div className="qHeader__icon">
           <FeaturedPlayListOutlinedIcon />
-        </div>
-        <div className="qHeader__icon">
+        </div></a>
+        <a href="https://www.quora.com/answer"> <div className="qHeader__icon">
           <AssignmentTurnedInOutlinedIcon />
-        </div>
-        <div className="qHeader__icon">
+        </div></a>
+        <a href="https://www.quora.com/spaces"><div className="qHeader__icon">
           <PeopleAltOutlinedIcon />
-        </div>
-        <div className="qHeader__icon">
+        </div></a>
+        <a href="https://www.quora.com/notifications"><div className="qHeader__icon">
           <NotificationsOutlinedIcon />
-        </div>
-      </div> */}
+        </div></a>
+      </div>
       <div className="qHeader__input">
         <SearchIcon />
-        <input type="text" style={{width:'600px'}} placeholder="Search Quora" />
+        <input type="text" placeholder="Search Quora" />
       </div>
       <div className="qHeader__Rem">
         <div className="qHeader__avatar">
