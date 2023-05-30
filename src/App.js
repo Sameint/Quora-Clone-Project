@@ -28,7 +28,9 @@ function App() {
       }
     });
   }, [dispatch]);
-  return <div className="App">{user ? <Quora /> : <Login />}</div>;
+  return (<div className="App">{user ? <Quora /> : <Login />}
+  </div>)
+  
 }
 
 export default App;

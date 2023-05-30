@@ -1,5 +1,26 @@
-.quora__content{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
+.quora__content {
+  display: flex;
+   margin-top: 50px;
+justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  /* CSS rules for small screens */
+  .quora__content {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* CSS rules for medium screens */
+  .quora__content {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* CSS rules for large screens */
+  .quora__content {
+    flex-wrap: nowrap;
+  }
 }

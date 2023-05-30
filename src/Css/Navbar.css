@@ -181,3 +181,71 @@
   border-radius: 33px;
   cursor: pointer;
 }
+
+.qHeader__icons {
+  display: flex;
+  margin-right: 20px;
+}
+
+.qHeader__icon > .MuiSvgIcon-root {
+  color: grey;
+  cursor: pointer;
+  font-size: xx-large;
+  padding: 5px 20px;
+}
+
+.qHeader__icon > .MuiSvgIcon-root:hover {
+  color: #8f1f1b;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+.qHeader__menu-icon {
+  display: none;
+  color: grey;
+  cursor: pointer;
+  font-size: xx-large;
+  padding: 5px 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .qHeader {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .qHeader__icons {
+    margin-right: 0;
+  }
+
+  .qHeader__icon > .MuiSvgIcon-root {
+    display: none;
+  }
+
+  .qHeader__menu-icon {
+    display: block;
+  }
+  
+  /* Additional styles for the burger menu */
+  .qHeader__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 0.5);
+  }
+
+  .qHeader__menu.show {
+    display: block;
+  }
+
+  .qHeader__menu-item {
+    margin-bottom: 10px;
+  }
+}
+
