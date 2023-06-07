@@ -5,6 +5,8 @@ import "./App.css";
 import { login, logout, selectUser } from "./features/userSlice";
 import Login from "./component/auth/Login";
 import { auth } from "./firebase";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import SidebarOptions from "./component/SidebarOptions";
 
 function App() {
   const user = useSelector(selectUser);
@@ -22,15 +24,23 @@ function App() {
           })
         );
         console.log(authUser);
-      } 
-      else {
+      } else {
         dispatch(logout());
       }
     });
   }, [dispatch]);
-  return (<div className="App">{user ? <Quora /> : <Login />}
-  </div>)
-  
+
+  // const router = createBrowserRouter([
+  //   {
+  //     path: "/SidebarOptions",
+  //     element: <SidebarOptions />,
+  //   },
+  // ]);
+  return (
+    <div className="App">
+      {user ? <Quora /> : <Login />}
+</div>
+  );
 }
 
 export default App;
