@@ -6,12 +6,21 @@ import { login, logout, selectUser } from "./features/userSlice";
 import Login from "./component/auth/Login";
 import { auth } from "./firebase";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import SidebarOptions from "./component/SidebarOptions";
-
+import Following from "./component/pages/following";
 function App() {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: user ? <Quora /> : <Login />,
+    },
+    {
+      path: "/following",
+      element: <Following />,
+    },
+  ]);
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
@@ -30,16 +39,10 @@ function App() {
     });
   }, [dispatch]);
 
-  // const router = createBrowserRouter([
-  //   {
-  //     path: "/SidebarOptions",
-  //     element: <SidebarOptions />,
-  //   },
-  // ]);
   return (
     <div className="App">
-      {user ? <Quora /> : <Login />}
-</div>
+      <RouterProvider router={router}></RouterProvider>
+    </div>
   );
 }
 

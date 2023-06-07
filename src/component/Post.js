@@ -155,6 +155,7 @@ function Post({ Id, question, image, timestamp, quoraUser }) {
               />
             </div>
             <div className="modal__button">
+              
               <button className="cancle" onClick={() => setIsModalOpen(false)}>
                 Cancel
               </button>

@@ -17,7 +17,7 @@ import PeopleAltOutlined from "@mui/icons-material/PeopleAltOutlined";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AddLinkIcon from "@mui/icons-material/AddLink";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-
+import { useNavigate } from "react-router-dom";
 Modal.setAppElement("#root");
 
 function Navbar() {
@@ -26,6 +26,7 @@ function Navbar() {
   const [input, setInput] = useState("");
   const [inputUrl, setInputUrl] = useState("");
 
+  const navigate=useNavigate();
   const handleQuestion = (e) => {
     e.preventDefault();
     setIsModalOpen(false);
@@ -57,21 +58,21 @@ function Navbar() {
         />
       </div>
       <div className="qHeader__icons">
-      <a href="https://www.quora.com/"> <div className="qHeader__icon">
+     <div className="qHeader__icon">
           <HomeIcon />
-        </div></a>
-        <a href="https://www.quora.com/following"><div className="qHeader__icon">
+        </div>
+       <div  onClick = {()=> navigate('/following')} className="qHeader__icon">
           <FeaturedPlayListOutlinedIcon />
-        </div></a>
-        <a href="https://www.quora.com/answer"> <div className="qHeader__icon">
+        </div>
+       <div className="qHeader__icon">
           <AssignmentTurnedInOutlinedIcon />
-        </div></a>
-        <a href="https://www.quora.com/spaces"><div className="qHeader__icon">
+        </div>
+        <div className="qHeader__icon">
           <PeopleAltOutlinedIcon />
-        </div></a>
-        <a href="https://www.quora.com/notifications"><div className="qHeader__icon">
+        </div>
+       <div className="qHeader__icon">
           <NotificationsOutlinedIcon />
-        </div></a>
+        </div>
       </div>
       <div className="qHeader__input">
         <SearchIcon />
@@ -125,6 +126,7 @@ function Navbar() {
               type="text"
               placeholder="Start your question with 'What','How','Why',etc."
             />
+            
             <div className="modal__fieldLink">
               <AddLinkIcon />
               <input
@@ -136,6 +138,7 @@ function Navbar() {
             </div>
           </div>
           <div className="modal__buttons">
+          <button className="add" onClick={()=>setInput("") + setInputUrl("")} >Reset</button>
             <button className="cancle" onClick={() => setIsModalOpen(false)}>
               Close
             </button>
