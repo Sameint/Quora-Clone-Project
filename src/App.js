@@ -8,11 +8,16 @@ import { auth } from "./firebase";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Following from "./component/pages/following";
 import User from "./component/pages/users";
+import Questions from "./component/pages/questions";
+import Notification from "./component/pages/notification";
+import Navbar from "./component/Navbar";
+
 function App() {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
   const router = createBrowserRouter([
+    
     {
       path: "/",
       element: user ? <Quora /> : <Login />,
@@ -23,8 +28,16 @@ function App() {
     },
     {
       path: "/user",
-      element: <User/>,
-    }
+      element: <User />,
+    },
+    {
+      path: "/questions",
+      element: <Questions />,
+    },
+    {
+      path: "/notification",
+      element: <Notification />,
+    },
   ]);
 
   useEffect(() => {

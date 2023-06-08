@@ -5,7 +5,7 @@ import AssignmentTurnedInOutlinedIcon from "@mui/icons-material/AssignmentTurned
 import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import SearchIcon from "@mui/icons-material/Search";
-import { Avatar, Input, Link } from "@mui/material";
+import { Avatar, Input } from "@mui/material";
 import LanguageIcon from "@mui/icons-material/Language";
 import { Button } from "@mui/material";
 import "../Css/Navbar.css";
@@ -18,6 +18,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AddLinkIcon from "@mui/icons-material/AddLink";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 Modal.setAppElement("#root");
 
 function Navbar() {
@@ -26,7 +27,7 @@ function Navbar() {
   const [input, setInput] = useState("");
   const [inputUrl, setInputUrl] = useState("");
 
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const handleQuestion = (e) => {
     e.preventDefault();
     setIsModalOpen(false);
@@ -58,21 +59,29 @@ function Navbar() {
         />
       </div>
       <div className="qHeader__icons">
-     <div className="qHeader__icon">
+        <div className="qHeader__icon">
           <HomeIcon />
         </div>
-       <div  onClick = {()=> navigate('/following')} className="qHeader__icon">
-          <FeaturedPlayListOutlinedIcon />
-        </div>
-       <div   className="qHeader__icon">
-          <AssignmentTurnedInOutlinedIcon />
-        </div>
-        <div  onClick = {()=> navigate('/user')}  className="qHeader__icon">
-          <PeopleAltOutlinedIcon />
-        </div>
-       <div  className="qHeader__icon">
-          <NotificationsOutlinedIcon />
-        </div>
+        <Link to="/following">
+          <div className="qHeader__icon">
+            <FeaturedPlayListOutlinedIcon />
+          </div>
+        </Link>
+        <Link to="/questions">
+          <div className="qHeader__icon">
+            <AssignmentTurnedInOutlinedIcon />
+          </div>
+        </Link>
+        <Link to="/user">
+          <div className="qHeader__icon">
+            <PeopleAltOutlinedIcon />
+          </div>
+        </Link>
+        <Link to="/notification">
+          <div className="qHeader__icon">
+            <NotificationsOutlinedIcon />
+          </div>
+        </Link>
       </div>
       <div className="qHeader__input">
         <SearchIcon />
@@ -126,7 +135,7 @@ function Navbar() {
               type="text"
               placeholder="Start your question with 'What','How','Why',etc."
             />
-            
+
             <div className="modal__fieldLink">
               <AddLinkIcon />
               <input
@@ -138,7 +147,12 @@ function Navbar() {
             </div>
           </div>
           <div className="modal__buttons">
-          <button className="add" onClick={()=>setInput("") + setInputUrl("")} >Reset</button>
+            <button
+              className="add"
+              onClick={() => setInput("") + setInputUrl("")}
+            >
+              Reset
+            </button>
             <button className="cancle" onClick={() => setIsModalOpen(false)}>
               Close
             </button>
