@@ -64,13 +64,13 @@ function Navbar() {
        <div  onClick = {()=> navigate('/following')} className="qHeader__icon">
           <FeaturedPlayListOutlinedIcon />
         </div>
-       <div className="qHeader__icon">
+       <div   className="qHeader__icon">
           <AssignmentTurnedInOutlinedIcon />
         </div>
-        <div className="qHeader__icon">
+        <div  onClick = {()=> navigate('/user')}  className="qHeader__icon">
           <PeopleAltOutlinedIcon />
         </div>
-       <div className="qHeader__icon">
+       <div  className="qHeader__icon">
           <NotificationsOutlinedIcon />
         </div>
       </div>

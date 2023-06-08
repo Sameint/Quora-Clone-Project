@@ -7,6 +7,7 @@ import Login from "./component/auth/Login";
 import { auth } from "./firebase";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Following from "./component/pages/following";
+import User from "./component/pages/users";
 function App() {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
@@ -20,7 +21,12 @@ function App() {
       path: "/following",
       element: <Following />,
     },
+    {
+      path: "/user",
+      element: <User/>,
+    }
   ]);
+
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
