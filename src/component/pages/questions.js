@@ -8,7 +8,7 @@ function Questions() {
         <React.Fragment>
         <CssBaseline />
         <Container fixed>
-          <Box sx={{ bgcolor: "teal", height: "100%", borderRadius: "15px" }}>
+          <Box sx={{ bgcolor: "#fff", height: "100%", borderRadius: "15px" }}>
           <button  onClick={()  => navigate("/")} 
             style={{position:"absolute",  padding:"8px",marginTop:"10px" ,background:"red",
              color:"white", border:"none",borderRadius:"10px"}}>Back to homepage</button>

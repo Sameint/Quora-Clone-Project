@@ -17,7 +17,7 @@ useEffect(()=>{
     <React.Fragment>
       <CssBaseline />
       <Container fixed>
-        <Box sx={{ bgcolor: "orange", height: "100%", borderRadius: "15px" }}>
+        <Box sx={{ bgcolor: "#fff",boxShadow:"0px 0px 4px", height: "100%", borderRadius: "15px" }}>
           <button
             onClick={() => navigate("/")}
             style={{
@@ -32,7 +32,7 @@ useEffect(()=>{
           >
             Back to homepage
           </button>
-          <h1 style={{ textAlign: "center" }}>FOLLOWING_DATA</h1>
+          <h1 style={{ textAlign: "center",color:"red" }}>FOLLOWING_DATA</h1>
           <hr />
           {data.map((detail) => {
             return (

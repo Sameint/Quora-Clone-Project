@@ -19,11 +19,11 @@ function Users() {
     <React.Fragment>
       <CssBaseline />
       <Container fixed>
-        <Box sx={{ bgcolor: "teal", height: "100%", borderRadius: "15px" }}>
+        <Box sx={{ bgcolor: "#fff",boxShadow:"0px 0px 4px", height: "100%", borderRadius: "15px" }}>
         <button  onClick={()  => navigate("/")} 
           style={{position:"absolute",  padding:"8px",marginTop:"10px" ,background:"red",
            color:"white", border:"none",borderRadius:"10px"}}>Back to homepage</button>
-          <h1 style={{textAlign:"center"}}>USER_DETAILS</h1><hr/>
+          <h1 style={{textAlign:"center",color:"red"}}>USER_DETAILS</h1><hr/>
           {data.map((detail) =>{
             return(
                 <div className="user_card">
