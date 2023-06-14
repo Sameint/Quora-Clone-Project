@@ -1,6 +1,7 @@
 import { Avatar, Box, Container, CssBaseline } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './users.css'
 function Following() {
   const[data,setData]=useState([]);
   const navigate=useNavigate();
