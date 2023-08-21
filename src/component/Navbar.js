@@ -27,7 +27,7 @@ function Navbar() {
   const [input, setInput] = useState("");
   const [inputUrl, setInputUrl] = useState("");
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const handleQuestion = (e) => {
     e.preventDefault();
     setIsModalOpen(false);

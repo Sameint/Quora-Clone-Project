@@ -10,7 +10,7 @@ import Following from "./component/pages/following";
 import User from "./component/pages/users";
 import Questions from "./component/pages/questions";
 import Notification from "./component/pages/notification";
-import Navbar from "./component/Navbar";
+// import Navbar from "./component/Navbar";
 
 function App() {
   const user = useSelector(selectUser);
