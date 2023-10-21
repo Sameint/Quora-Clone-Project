@@ -12,7 +12,7 @@ import { getFirestore } from "firebase/firestore";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// For Firebase JS SDK v7.20.0 and later, measurementId is optiona
 const firebaseConfig = {
   apiKey: "AIzaSyAPIxEBYWSO93cNNGW1rVKyNPZ2EBXngOQ",
   authDomain: "quora-clone-project-521cb.firebaseapp.com",
